@@ -9,7 +9,8 @@ async function solution(url) {
 describe("tests", () => {
   it("should return and array with the names", async () => {
     const names = await solution('https://rickandmortyapi.com/api/character');
-    expect(runCode()).toEqual(names);
+    const rta = await runCode();
+    expect(rta).toEqual(names);
   });
 })
 
