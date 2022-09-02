@@ -1,15 +1,16 @@
 import { runCode } from './exercise';
 
-it("should return [1,2,3,4]", () => {
-  const arrayA = [1, 2];
-  const arrayB = [3, 4];
-  const rta = runCode(arrayA, arrayB);
-  expect(rta).toEqual([1, 2, 3, 4]);
-});
+async function getNames(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data.results.map((item) => item.name)
+}
 
-it("should return [1,2,3,4,5]", () => {
-  const arrayA = [1, 2];
-  const arrayB = [3, 4, 5];
-  const rta = runCode(arrayA, arrayB);
-  expect(rta).toEqual([1, 2, 3, 4, 5]);
-});
+describe("tests", () => {
+  it("should return and array with the names", async () => {
+    const names = await getNames('https://rickandmortyapi.com/api/character');
+    expect(runCode()).toEqual(names);
+  });
+})
+
+

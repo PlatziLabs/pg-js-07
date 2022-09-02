@@ -1,10 +1,9 @@
-import { runCode } from './exercise';
+import { runCode } from "./exercise";
 
-const arrayA = [1, 2, 3, 4];
-const arrayB = [5, 6, 7, 8];
-const rta = runCode(arrayA, arrayB);
+(async () => {
+  const rta = await runCode();
 
-document.getElementById("app").innerHTML = `
-<p>Array A: ${arrayA}</p>
-<p>Array B: ${arrayB}</p>
-<p>Rta: ${rta}</p>`;
+  document.getElementById("app").innerHTML = `
+  <h1>Rick and Morty API</h1>
+  <p>Response from runCode(): ${rta}</p>`;
+})();
