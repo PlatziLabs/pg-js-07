@@ -1,3 +1,4 @@
+import "./styles.css";
 import { runCode } from "./exercise";
 
 (async () => {
@@ -5,5 +6,11 @@ import { runCode } from "./exercise";
 
   document.getElementById("app").innerHTML = `
   <h1>Rick and Morty API</h1>
-  <p>Response from runCode(): ${rta}</p>`;
+  <p>Response from runCode()</p>
+  <p>
+    <pre>
+      <code>${rta}</code>
+    </pre>
+  </p>
+  `;
 })();
