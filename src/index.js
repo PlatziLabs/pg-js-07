@@ -9,7 +9,7 @@ import { runCode } from "./exercise";
   <p>Response from runCode()</p>
   <p>
     <pre>
-      <code>${rta}</code>
+      ${rta}
     </pre>
   </p>
   `;
